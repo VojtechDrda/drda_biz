@@ -777,6 +777,14 @@
             }
         }
 
+        @keyframes logoScrollMobile {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-10 * 100vw / 5));
+            }
+        }
         .services {
             background: #1e293b;
         }
@@ -1108,6 +1116,10 @@
                 font-size: 2rem;
                 width: 60px;
                 height: 60px;
+            }
+
+            .clients-carousel-track {
+                 animation: logoScrollMobile 15s linear infinite;
             }
         }
     </style>

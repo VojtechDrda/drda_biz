@@ -1,0 +1,1612 @@
+<!DOCTYPE html>
+<html lang="cs" id="html-root">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title"></title>
+
+    <script>
+        // Translations object - single source of truth
+        const translations = {
+            en: {
+                pageTitle: "Vojtěch Drda - Automation & AI Integration Expert",
+                nav: {
+                    work: "Work",
+                    services: "Services",
+                    about: "About",
+                    contact: "Contact",
+                    freeConsultation: "Free Consultation"
+                },
+                hero: {
+                    title: "Automation & AI Integration Expert",
+                    subtitle: "Turn your biggest time-wasters into automated workflows",
+                    description: "What if your CRM updated itself, invoices processed automatically, and routine decisions happened without you? I build the technical solutions that make manual work disappear and free up your schedule.",
+                    cta: "Let's Talk Today"
+                },
+                showcase: {
+                    title: "Recent Work",
+                    projects: [
+                        {
+                            title: "No More Timesheet and Invoice Errors",
+                            description: "Built a system that processes contractor invoices and timesheets, automatically checks for errors, and sends correction requests when needed.",
+                            result: "95% accuracy, 80% time savings",
+                            tags: ["Make", "OpenAI", "Airtable"]
+                        },
+                        {
+                            title: "E-commerce with Minimal Human Work",
+                            description: "Designed a system that automatically processes online orders - invoicing, payment matching, inventory updates, shipping integration, and customer communications.",
+                            result: "70% time savings",
+                            tags: ["n8n", "Shoptet", "Abra Flexi"]
+                        },
+                        {
+                            title: "Invoice Approvals Without Delays or Chasing",
+                            description: "Created a system that automatically routes incoming invoices to managers for approval via Slack, handles reminders, and flags overdue approvals.",
+                            result: "85% faster approval process",
+                            tags: ["Make", "Digitoo", "Slack"]
+                        },
+                        {
+                            title: "Automated Video Content in Multiple Languages",
+                            description: "Built a tool that takes text input and automatically creates scripts, produces videos, and distributes them to recipients in multiple languages within minutes.",
+                            result: "90% time savings",
+                            tags: ["Power Automate", "OpenAI", "HeyGen"]
+                        }
+                    ]
+                },
+                clients: {
+                    title: "Trusted by"
+                },
+                services: {
+                    title: "My Services",
+                    items: [
+                        {
+                            title: "Business Process Automation",
+                            description: "Custom automation workflows using Make, Power Automate and n8n platforms to eliminate repetitive tasks and streamline operations."
+                        },
+                        {
+                            title: "API Integration",
+                            description: "Connect your existing tools and systems seamlessly. From CRM to invoicing integrations and third-party service connections."
+                        },
+                        {
+                            title: "AI Solutions",
+                            description: "Implement AI-powered tools for document processing, data analysis, voice and video assistants"
+                        }
+                    ]
+                },
+                about: {
+                    title: "About Me",
+                    description1: "With extensive experience in IT consulting and automation, I specialize in helping businesses streamline their operations through smart technology solutions.",
+                    description2: "My background includes workflow automation, API integrations and AI implementation. I've helped companies save hundreds of hours monthly through smart automation strategies.",
+                    stats: {
+                        projects: "Projects Completed",
+                        hours: "Hours Saved Monthly",
+                        satisfaction: "Cost Savings Generated"
+                    }
+                },
+                contact: {
+                    title: "Ready to Automate Your Business?",
+                    description: "Let's discuss how automation and AI can transform your operations. Get in touch for a free consultation.",
+                    cta: "Free Consultation"
+                },
+                business: {
+                    title: "Business Information",
+                    content: "<strong>Vojtěch Drda</strong><br><br>Vokovická 679<br>160 00 Praha 6<br>Czech Republic<br><br><strong>Registration Details:</strong><br>ID: 71543414<br>VAT ID: CZ687816463 (identified person)<br><br>Natural person registered in the Trade Register."
+                },
+                footer: {
+                    copyright: "Vojtěch Drda"
+                },
+                calendar: {
+                    url: "https://cal.com/vojtechdrda/en30min"
+                }
+            },
+            cs: {
+                pageTitle: "Vojtěch Drda - Expert na automatizaci a AI integraci",
+                nav: {
+                    work: "Projekty",
+                    services: "Služby",
+                    about: "O mně",
+                    contact: "Kontakt",
+                    freeConsultation: "Konzultace zdarma"
+                },
+                hero: {
+                    title: "Expert na automatizaci a AI integraci",
+                    subtitle: "Ušetřím vám čas a náklady, které vás stojí rutinní činnosti",
+                    description: "Kopírování dat mezi systémy, kontrola podkladů, posílání upomínek - proč to dělat ručně? Navrhuji řešení, která tuhle práci udělají za vás rychleji a bez chyb.",
+                    cta: "Pojďme si promluvit"
+                },
+                showcase: {
+                    title: "Nedávné projekty",
+                    projects: [
+                        {
+                            title: "Konec s chybami v timesheetech a fakturách",
+                            description: "Vyvinul jsem systém, který zpracuje faktury a timesheety od kontraktorů, překontroluje chyby a automaticky odesílá výzvy k opravě podkladů.",
+                            result: "95% přesnost, 80% úspora času",
+                            tags: ["Make", "OpenAI", "Airtable"]
+                        },
+                        {
+                            title: "E-shop s minimem lidské práce",
+                            description: "Navrhl jsem systém, který automaticky procesuje objednávky z e-shopu - fakturace, párování plateb, skladové doklady, propojení na dopravce, komunikace se zákazníkem.",
+                            result: "Úspora času 70 %",
+                            tags: ["n8n", "Shoptet", "Abra Flexi"]
+                        },
+                        {
+                            title: "Schvalování faktur bez zdržování a urgencí",
+                            description: "Vytvořil jsem systém, který došlé faktury automaticky rozesílá manažeům ke schválení ve Slacku, řeší urgence a upozorňuje na neschválené doklady.",
+                            result: "Snížení doby schvalování o 85 %",
+                            tags: ["Make", "Digitoo", "Slack"]
+                        },
+                        {
+                            title: "Automatická produkce video obsahu ve více jazycích",
+                            description: "Vytvořil jsem nástroj, který na základě textu automaticky vytvoří scénář, vyprodukuje video a rozešle ho příjemcům v řádu minut a v několika jazykových mutacích.",
+                            result: "Úspora času 90 %",
+                            tags: ["Power Automate", "OpenAI", "HeyGen"]
+                        }
+                    ]
+                },
+                clients: {
+                    title: "Důvěřují mi"
+                },
+                services: {
+                    title: "Moje služby",
+                    items: [
+                        {
+                            title: "Automatizace business procesů",
+                            description: "Automatizace procesů na míru pomocí platforem Make, Power Automate a n8n."
+                        },
+                        {
+                            title: "API integrace",
+                            description: "Bezproblémově propojte vaše existující nástroje a systémy. Od integrací CRM přes účetní systémy po připojení služeb třetích stran."
+                        },
+                        {
+                            title: "AI řešení",
+                            description: "Implementace AI nástrojů pro zpracování dokumentů, analýzu dat, hlasové a video asistenty."
+                        }
+                    ]
+                },
+                about: {
+                    title: "O mně",
+                    description1: "S rozsáhlými zkušenostmi v IT poradenství a automatizaci se specializuji na pomoc firmám při zefektivňování jejich provozu prostřednictvím inteligentních technologických řešení.",
+                    description2: "Díky automatizaci procesů, API integracím a implementaci AI jsem pomohl desítkám firem ušetřit stovky hodin měsíčně.",
+                    stats: {
+                        projects: "Dokončených projektů",
+                        hours: "Ušetřených hodin měsíčně",
+                        satisfaction: "Ušetřených nákladů"
+                    }
+                },
+                contact: {
+                    title: "Jste připraveni automatizovat?",
+                    description: "Pojďme si promluvit o tom, jak automatizace a AI mohou transformovat váš byznys. Domluvte si konzultaci, pošlete e-mail nebo zavolejte.",
+                    cta: "Konzultace zdarma"
+                },
+                business: {
+                    title: "Fakturační údaje",
+                    content: "<strong>Vojtěch Drda</strong><br><br>Vokovická 679<br>160 00 Praha 6<br><br><strong>Registrační údaje:</strong><br>IČO: 71543414<br>DIČ: CZ687816463 (identifikovaná osoba)<br><br>Fyzická osoba zapsaná v Živnostenském rejstříku."
+                },
+                footer: {
+                    copyright: "Vojtěch Drda"
+                },
+                calendar: {
+                    url: "https://cal.com/vojtechdrda/cz30min"
+                }
+            }
+        };
+
+        // Language detection and initialization
+        let currentLang = 'cs'; // Default to Czech
+
+        function detectLanguage() {
+            const savedLang = localStorage.getItem('preferredLanguage');
+            if (savedLang) {
+                return savedLang;
+            }
+
+            const browserLang = navigator.language || navigator.userLanguage;
+            const browserLangs = navigator.languages || [browserLang];
+
+            const isEnglishPreferred = browserLangs.some(lang =>
+                lang.toLowerCase().startsWith('en')
+            );
+
+            return isEnglishPreferred ? 'en' : 'cs';
+        }
+
+        function initLanguage() {
+            currentLang = detectLanguage();
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', function () {
+                    updateLanguage();
+                    updateLangButtons();
+                });
+            } else {
+                updateLanguage();
+                updateLangButtons();
+            }
+        }
+
+        function updateLanguage() {
+            const t = translations[currentLang];
+
+            const htmlRoot = document.getElementById('html-root');
+            if (htmlRoot) htmlRoot.lang = currentLang;
+
+            const pageTitle = document.getElementById('page-title');
+            if (pageTitle) pageTitle.textContent = t.pageTitle;
+
+            updateElement('nav-work', t.nav.work);
+            updateElement('nav-services', t.nav.services);
+            updateElement('nav-about', t.nav.about);
+            updateElement('nav-contact', t.nav.contact);
+            updateElement('nav-cta', t.nav.freeConsultation);
+
+            updateElement('hero-title', t.hero.title);
+            updateElement('hero-subtitle', t.hero.subtitle);
+            updateElement('hero-description', t.hero.description);
+            updateElement('hero-cta', t.hero.cta);
+
+            updateElement('showcase-title', t.showcase.title);
+
+            t.showcase.projects.forEach((project, index) => {
+                updateElement(`project-${index}-title`, project.title);
+                updateElement(`project-${index}-description`, project.description);
+                updateElement(`project-${index}-result`, project.result);
+
+                // Update tech tags
+                const tagsContainer = document.getElementById(`project-${index}-tags`);
+                if (tagsContainer && project.tags) {
+                    tagsContainer.innerHTML = '';
+                    project.tags.forEach(tag => {
+                        const tagElement = document.createElement('span');
+                        tagElement.className = 'tech-tag';
+                        tagElement.textContent = tag;
+                        tagsContainer.appendChild(tagElement);
+                    });
+                }
+
+
+            });
+
+            // Update duplicate slides for infinite loop
+            t.showcase.projects.forEach((project, index) => {
+                updateElement(`project-${index}-title-dup`, project.title);
+                updateElement(`project-${index}-description-dup`, project.description);
+                updateElement(`project-${index}-result-dup`, project.result);
+
+                const tagsContainer = document.getElementById(`project-${index}-tags-dup`);
+                if (tagsContainer && project.tags) {
+                    tagsContainer.innerHTML = '';
+                    project.tags.forEach(tag => {
+                        const tagElement = document.createElement('span');
+                        tagElement.className = 'tech-tag';
+                        tagElement.textContent = tag;
+                        tagsContainer.appendChild(tagElement);
+                    });
+                }
+            });
+
+            updateElement('clients-title', t.clients.title);
+            updateElement('services-title', t.services.title);
+
+            t.services.items.forEach((service, index) => {
+                updateElement(`service-${index}-title`, service.title);
+                updateElement(`service-${index}-description`, service.description);
+            });
+
+            updateElement('about-title', t.about.title);
+            updateElement('about-description1', t.about.description1);
+            updateElement('about-description2', t.about.description2);
+            updateElement('about-stats-projects', t.about.stats.projects);
+            updateElement('about-stats-hours', t.about.stats.hours);
+            updateElement('about-stats-satisfaction', t.about.stats.satisfaction);
+
+            updateElement('contact-title', t.contact.title);
+            updateElement('contact-description', t.contact.description);
+            updateElement('contact-cta', t.contact.cta);
+
+            updateElement('business-title', t.business.title);
+            const businessContent = document.getElementById('business-content');
+            if (businessContent && t.business.content) {
+                businessContent.innerHTML = t.business.content;
+            }
+
+            updateElement('footer-copyright', t.footer.copyright);
+
+            // Update calendar links (only consultation buttons)
+            const headerCta = document.getElementById('nav-cta');
+            const contactCta = document.getElementById('contact-cta');
+            const heroCta = document.getElementById('hero-cta');
+
+            if (headerCta) headerCta.href = t.calendar.url;
+            if (contactCta) contactCta.href = t.calendar.url;
+            if (heroCta) heroCta.href = '#contact'; // Hero button scrolls to contact
+        }
+
+        function updateElement(id, text) {
+            const element = document.getElementById(id);
+            if (element && text) {
+                element.textContent = text;
+            }
+        }
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('preferredLanguage', lang);
+            updateLanguage();
+            updateLangButtons();
+        }
+
+        function updateLangButtons() {
+            document.querySelectorAll('.lang-option').forEach(option => {
+                option.classList.remove('active');
+                if ((currentLang === 'en' && option.textContent.trim() === 'EN') ||
+                    (currentLang === 'cs' && option.textContent.trim() === 'CZ')) {
+                    option.classList.add('active');
+                }
+            });
+        }
+
+        initLanguage();
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #e2e8f0;
+            background: #0f172a;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2563eb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .logo:hover {
+            color: #3b82f6;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #e2e8f0;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: #2563eb;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .header-cta {
+            background: #ff6d5a;
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .header-cta:hover {
+            background: #e55a47;
+            transform: translateY(-1px);
+        }
+
+        .lang-switch {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 6px;
+            padding: 0.5rem 0.75rem;
+            cursor: pointer;
+            font-weight: 500;
+            color: #e2e8f0;
+            transition: all 0.3s ease;
+            display: flex;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .lang-switch:hover {
+            background: #334155;
+        }
+
+        .lang-option {
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .lang-option.active {
+            background: #2563eb;
+            color: white;
+        }
+
+        .lang-option:not(.active) {
+            color: #94a3b8;
+        }
+
+        .lang-option:not(.active):hover {
+            color: #e2e8f0;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: #e2e8f0;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        .main-content {
+            margin-top: 80px;
+        }
+
+        .section {
+            padding: 4rem 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 6rem 0;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .hero-image {
+            text-align: center;
+        }
+
+        .hero-photo {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            display: block;
+        }
+
+        .hero-text {
+            text-align: left;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero .description {
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #ff6d5a;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #e55a47;
+            transform: translateY(-2px);
+        }
+
+        .showcase {
+            background: #1e293b;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .showcase h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #f1f5f9;
+        }
+
+        .carousel-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 80px;
+        }
+
+        .carousel {
+            overflow: hidden;
+            border-radius: 12px;
+            position: relative;
+        }
+
+        .carousel-track {
+            display: flex;
+            width: 800%;
+            /* Double the width for 8 slides */
+            transition: transform 0.5s ease;
+        }
+
+        .project-slide {
+            width: 12.5%;
+            flex-shrink: 0;
+            background: #0f172a;
+            padding: 3rem;
+            border: 1px solid #334155;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .project-slide h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #2563eb;
+        }
+
+        .project-slide .description {
+            font-size: 1.1rem;
+            color: #94a3b8;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .project-slide .result {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #10b981;
+            margin-bottom: 1rem;
+        }
+
+        .project-slide .tech-tags {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .tech-tag {
+            background: #334155;
+            color: #94a3b8;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(37, 99, 235, 0.8);
+            border: none;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .carousel-arrow:hover {
+            background: rgba(37, 99, 235, 1);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .carousel-arrow.prev {
+            left: 15px;
+        }
+
+        .carousel-arrow.next {
+            right: 15px;
+        }
+
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #334155;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .dot.active {
+            background: #2563eb;
+        }
+
+        .clients {
+            background: #0f172a;
+            padding: 3rem 0;
+            border-bottom: 1px solid #334155;
+            overflow: hidden;
+        }
+
+        .clients h2 {
+            text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: #94a3b8;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .clients-carousel-container {
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .clients-carousel-wrapper {
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .clients-carousel-track {
+            display: flex;
+            animation: logoScroll 30s linear infinite;
+            width: calc(30 * 100vw / 5);
+        }
+
+        .client-logo-slide {
+            flex: 0 0 calc(100vw / 5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 0;
+        }
+
+        .client-logo {
+            height: 50px;
+            width: auto;
+            max-width: 150px;
+            opacity: 1;
+            filter: grayscale(100%);
+            transition: all 0.3s ease;
+            object-fit: contain;
+        }
+
+        .client-logo:hover {
+            opacity: 1;
+            filter: grayscale(0%);
+            transform: scale(1.05);
+        }
+
+        @keyframes logoScroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(calc(-10 * 100vw / 5));
+            }
+        }
+
+        .services {
+            background: #1e293b;
+        }
+
+        .services h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #f1f5f9;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: #0f172a;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            border: 1px solid #334155;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #f1f5f9;
+        }
+
+        .service-card p {
+            color: #94a3b8;
+            line-height: 1.6;
+        }
+
+        .about-section {
+            background: #0f172a;
+        }
+
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            text-align: center;
+        }
+
+        .profile-photo {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #334155;
+        }
+
+        .about-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #f1f5f9;
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            color: #94a3b8;
+            margin-bottom: 1.5rem;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2563eb;
+        }
+
+        .stat-label {
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        .contact {
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-info .contact-link {
+            color: white;
+            text-decoration: none;
+            display: flex;
+        }
+
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-3px);
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 1rem;
+            border-radius: 50%;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-item:hover .contact-icon {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.4);
+            transform: scale(1.1);
+        }
+
+        .contact-text {
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .contact-link {
+            color: white;
+            text-decoration: none;
+            display: flex;
+        }
+
+        .contact-link:hover {
+            text-decoration: none;
+        }
+
+        .contact-link:hover .contact-item {
+            transform: translateY(-3px);
+        }
+
+        .business-info {
+            background: #1e293b;
+            padding: 3rem 0;
+            border-top: 1px solid #334155;
+        }
+
+
+
+        .business-details {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .business-card {
+            background: #0f172a;
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid #334155;
+        }
+
+        .business-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: #2563eb;
+            font-weight: 600;
+        }
+
+        .business-card p {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 0.75rem;
+        }
+
+        .business-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .business-card strong {
+            color: #e2e8f0;
+        }
+
+        .footer {
+            background: #020617;
+            color: #94a3b8;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .lang-switch {
+                display: none;
+            }
+
+            .header-cta {
+                display: none;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: rgba(15, 23, 42, 0.98);
+                flex-direction: column;
+                justify-content: start;
+                align-items: center;
+                padding-top: 2rem;
+                transition: left 0.3s ease;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-menu li {
+                margin: 1rem 0;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .hero-text {
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .carousel-container {
+                padding: 0 20px;
+            }
+
+            .project-slide {
+                padding: 2rem 1.5rem;
+            }
+
+            .carousel-arrow {
+                display: none;
+            }
+
+            .client-logo-slide {
+                flex: 0 0 33.333%;
+            }
+
+            .client-logo {
+                height: 40px;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 2rem;
+                align-items: center;
+            }
+
+            .contact-icon {
+                font-size: 2rem;
+                width: 60px;
+                height: 60px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">Vojtěch Drda</a>
+            <ul class="nav-menu">
+                <li><a href="#showcase" id="nav-work"></a></li>
+                <li><a href="#services" id="nav-services"></a></li>
+                <li><a href="#about" id="nav-about"></a></li>
+                <li><a href="#contact" id="nav-contact"></a></li>
+            </ul>
+            <div class="nav-right">
+                <a href="#" class="header-cta" id="nav-cta" target="_blank"></a>
+                <div class="lang-switch">
+                    <span class="lang-option" onclick="setLanguage('en')">EN</span>
+                    <span class="lang-option active" onclick="setLanguage('cs')">CZ</span>
+                </div>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section id="home" class="hero section">
+            <div class="hero-content">
+                <div class="hero-image">
+                    <img src="vojtech_drda.png" alt="Vojtěch Drda" class="hero-photo">
+                </div>
+                <div class="hero-text">
+                    <h1 id="hero-title"></h1>
+                    <p class="subtitle" id="hero-subtitle"></p>
+                    <p class="description" id="hero-description"></p>
+                    <a href="#" class="cta-button" id="hero-cta" target="_blank"></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="showcase" class="showcase section">
+            <div class="container">
+                <h2 id="showcase-title"></h2>
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-track" id="carouselTrack">
+                            <!-- Original slides -->
+                            <div class="project-slide">
+                                <h3 id="project-0-title"></h3>
+                                <p class="description" id="project-0-description"></p>
+                                <p class="result" id="project-0-result"></p>
+                                <div class="tech-tags" id="project-0-tags"></div>
+                            </div>
+                            <div class="project-slide">
+                                <h3 id="project-1-title"></h3>
+                                <p class="description" id="project-1-description"></p>
+                                <p class="result" id="project-1-result"></p>
+                                <div class="tech-tags" id="project-1-tags"></div>
+                            </div>
+                            <div class="project-slide">
+                                <h3 id="project-2-title"></h3>
+                                <p class="description" id="project-2-description"></p>
+                                <p class="result" id="project-2-result"></p>
+                                <div class="tech-tags" id="project-2-tags"></div>
+                            </div>
+                            <div class="project-slide">
+                                <h3 id="project-3-title"></h3>
+                                <p class="description" id="project-3-description"></p>
+                                <p class="result" id="project-3-result"></p>
+                                <div class="tech-tags" id="project-3-tags"></div>
+                            </div>
+                            <!-- Duplicate slides for infinite loop -->
+                            <div class="project-slide">
+                                <h3 id="project-0-title-dup"></h3>
+                                <p class="description" id="project-0-description-dup"></p>
+                                <p class="result" id="project-0-result-dup"></p>
+                                <div class="tech-tags" id="project-0-tags-dup"></div>
+                            </div>
+                            <div class="project-slide">
+                                <h3 id="project-1-title-dup"></h3>
+                                <p class="description" id="project-1-description-dup"></p>
+                                <p class="result" id="project-1-result-dup"></p>
+                                <div class="tech-tags" id="project-1-tags-dup"></div>
+                            </div>
+                            <div class="project-slide">
+                                <h3 id="project-2-title-dup"></h3>
+                                <p class="description" id="project-2-description-dup"></p>
+                                <p class="result" id="project-2-result-dup"></p>
+                                <div class="tech-tags" id="project-2-tags-dup"></div>
+                            </div>
+                            <div class="project-slide">
+                                <h3 id="project-3-title-dup"></h3>
+                                <p class="description" id="project-3-description-dup"></p>
+                                <p class="result" id="project-3-result-dup"></p>
+                                <div class="tech-tags" id="project-3-tags-dup"></div>
+                            </div>
+                        </div>
+                        <button class="carousel-arrow prev" onclick="previousSlide()">‹</button>
+                        <button class="carousel-arrow next" onclick="nextSlide()">›</button>
+                    </div>
+                    <div class="carousel-dots" id="carouselDots"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="clients">
+            <div class="container">
+                <h2 id="clients-title"></h2>
+                <div class="clients-carousel-container">
+                    <div class="clients-carousel-wrapper">
+                        <div class="clients-carousel-track">
+                            <div class="client-logo-slide">
+                                <img src="logos/seedstarter.png" alt="Seed Starter" class="client-logo">
+                            </div>
+                            <div class="client-logo-slide">
+                                <img src="logos/mup_logo.png" alt="Marketup" class="client-logo">
+                            </div>
+                            <div class="client-logo-slide">
+                                <img src="logos/projectman.png" alt="Projectman" class="client-logo">
+                            </div>
+                            <div class="client-logo-slide">
+                                <img src="logos/fidoo.png" alt="Fidoo" class="client-logo">
+                            </div>
+                            <div class="client-logo-slide">
+                                <img src="logos/diverzo.webp" alt="Diverzo" class="client-logo">
+                            </div>
+                            <div class="client-logo-slide">
+                                <img src="logos/azlegal.webp" alt="AZ Legal"
+                                    class="client-logo">
+                            </div>
+                            <div class="client-logo-slide">
+                                <img src="logos/chirs.png" alt="Chirs" class="client-logo">
+                            </div>
+                            <div class="client-logo-slide">
+                                <img src="logos/PALMAPP_white.png" alt="PalmApp" class="client-logo">
+                            </div>
+                            <div class="client-logo-slide">
+                                <img src="logos/onlio_aps.png" alt="Onlio APS" class="client-logo">
+                            </div>
+                            <div class="client-logo-slide">
+                                <img src="logos/tmk.webp" alt="TMK system" class="client-logo">
+                            </div>
+                            <!-- Duplicate logos for seamless loop -->
+                            <div class="client-logo-slide">
+                                <img src="logos/seedstarter.png" alt="Seed Starter" class="client-logo">
+                            </div>
+                            <div class="client-logo-slide">
+                                <img src="logos/mup_logo.png" alt="Marketup" class="client-logo">
+                            </div>
+                            <div class="client-logo-slide">
+                                <img src="logos/projectman.png" alt="Projectman" class="client-logo">
+                            </div>
+                            <div class="client-logo-slide">
+                                <img src="logos/fidoo.png" alt="Fidoo" class="client-logo">
+                            </div>
+                            <div class="client-logo-slide">
+                                <img src="logos/diverzo.webp" alt="Diverzo" class="client-logo">
+                            </div>
+                            <div class="client-logo-slide">
+                                <img src="logos/az-legal-advokatni-kancelar-registered-logo-retina.webp" alt="AZ Legal"
+                                    class="client-logo">
+                            </div>
+                            <div class="client-logo-slide">
+                                <img src="logos/chirs.png" alt="Chirs" class="client-logo">
+                            </div>
+                            <div class="client-logo-slide">
+                                <img src="logos/PALMAPP_white.png" alt="PalmApp" class="client-logo">
+                            </div>
+                            <div class="client-logo-slide">
+                                <img src="logos/onlio_aps.png" alt="Onlio APS" class="client-logo">
+                            </div>
+                            <div class="client-logo-slide">
+                                <img src="logos/tmk.webp" alt="TMK system" class="client-logo">
+                            </div>
+                            <!-- Duplicate logos for seamless loop -->
+                            <div class="client-logo-slide">
+                                <img src="logos/seedstarter.png" alt="Seed Starter" class="client-logo">
+                            </div>
+                            <div class="client-logo-slide">
+                                <img src="logos/mup_logo.png" alt="Marketup" class="client-logo">
+                            </div>
+                            <div class="client-logo-slide">
+                                <img src="logos/projectman.png" alt="Projectman" class="client-logo">
+                            </div>
+                            <div class="client-logo-slide">
+                                <img src="logos/fidoo.png" alt="Fidoo" class="client-logo">
+                            </div>
+                            <div class="client-logo-slide">
+                                <img src="logos/diverzo.webp" alt="Diverzo" class="client-logo">
+                            </div>
+                            <div class="client-logo-slide">
+                                <img src="logos/az-legal-advokatni-kancelar-registered-logo-retina.webp" alt="AZ Legal"
+                                    class="client-logo">
+                            </div>
+                            <div class="client-logo-slide">
+                                <img src="logos/chirs.png" alt="Chirs" class="client-logo">
+                            </div>
+                            <div class="client-logo-slide">
+                                <img src="logos/PALMAPP_white.png" alt="PalmApp" class="client-logo">
+                            </div>
+                            <div class="client-logo-slide">
+                                <img src="logos/onlio_aps.png" alt="Onlio APS" class="client-logo">
+                            </div>
+                            <div class="client-logo-slide">
+                                <img src="logos/tmk.webp" alt="TMK system" class="client-logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services section">
+            <div class="container">
+                <h2 id="services-title"></h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">🤖</div>
+                        <h3 id="service-0-title"></h3>
+                        <p id="service-0-description"></p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🔗</div>
+                        <h3 id="service-1-title"></h3>
+                        <p id="service-1-description"></p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🧠</div>
+                        <h3 id="service-2-title"></h3>
+                        <p id="service-2-description"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section section">
+            <div class="container">
+                <div class="about">
+                    <div class="about-image">
+                        <img src="vojtech_drda.png" alt="Vojtěch Drda" class="profile-photo">
+                    </div>
+                    <div class="about-content">
+                        <h2 id="about-title"></h2>
+                        <p id="about-description1"></p>
+                        <p id="about-description2"></p>
+                        <div class="stats">
+                            <div class="stat">
+                                <div class="stat-number">90+</div>
+                                <div class="stat-label" id="about-stats-projects"></div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">350+</div>
+                                <div class="stat-label" id="about-stats-hours"></div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">850k EUR+</div>
+                                <div class="stat-label" id="about-stats-satisfaction"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact section">
+            <div class="container">
+                <h2 id="contact-title"></h2>
+                <p id="contact-description"></p>
+                <a href="#" class="cta-button" id="contact-cta" target="_blank"></a>
+                <div class="contact-info">
+                    <a href="mailto:vojtech@drda.biz" class="contact-link">
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-text">vojtech@drda.biz</div>
+                        </div>
+                    </a>
+                    <a href="tel:+420723653670" class="contact-link">
+                        <div class="contact-item">
+                            <div class="contact-icon">📱</div>
+                            <div class="contact-text">+420 723 653 670</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="business-info">
+            <div class="container">
+                <div class="business-details">
+                    <div class="business-card">
+                        <h3 id="business-title"></h3>
+                        <p id="business-content"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="current-year">2025</span> <span id="footer-copyright"></span></p>
+        </div>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+        const totalSlides = 4;
+        let autoRotateInterval;
+
+        function toggleMenu() {
+            const navMenu = document.querySelector('.nav-menu');
+            navMenu.classList.toggle('active');
+        }
+
+        function updateCarousel() {
+            const track = document.getElementById('carouselTrack');
+            if (track) {
+                const translateX = -currentSlide * 12.5; // 12.5% per slide
+                track.style.transform = `translateX(${translateX}%)`;
+
+                // Reset to beginning when we reach the duplicates
+                if (currentSlide >= totalSlides) {
+                    setTimeout(() => {
+                        track.style.transition = 'none';
+                        currentSlide = 0;
+                        track.style.transform = `translateX(0%)`;
+                        setTimeout(() => {
+                            track.style.transition = 'transform 0.5s ease';
+                        }, 50);
+                    }, 500);
+                }
+
+                updateDots();
+            }
+        }
+
+        function nextSlide() {
+            currentSlide = currentSlide + 1;
+            updateCarousel();
+            resetAutoRotate();
+        }
+
+        function previousSlide() {
+            if (currentSlide <= 0) {
+                const track = document.getElementById('carouselTrack');
+                track.style.transition = 'none';
+                currentSlide = totalSlides;
+                track.style.transform = `translateX(-${currentSlide * 12.5}%)`;
+                setTimeout(() => {
+                    track.style.transition = 'transform 0.5s ease';
+                    currentSlide = totalSlides - 1;
+                    updateCarousel();
+                }, 50);
+            } else {
+                currentSlide = currentSlide - 1;
+                updateCarousel();
+            }
+            resetAutoRotate();
+        }
+
+        function goToSlide(slideIndex) {
+            currentSlide = slideIndex;
+            updateCarousel();
+            resetAutoRotate();
+        }
+
+        function updateDots() {
+            const dots = document.querySelectorAll('.dot');
+            dots.forEach((dot, index) => {
+                // Map duplicate slides back to original dots
+                const activeDotIndex = currentSlide % totalSlides;
+
+                if (index === activeDotIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+
+        function createDots() {
+            const dotsContainer = document.getElementById('carouselDots');
+            if (dotsContainer) {
+                dotsContainer.innerHTML = '';
+                for (let i = 0; i < totalSlides; i++) {
+                    const dot = document.createElement('div');
+                    dot.classList.add('dot');
+                    if (i === 0) dot.classList.add('active');
+                    dot.addEventListener('click', () => goToSlide(i));
+                    dotsContainer.appendChild(dot);
+                }
+            }
+        }
+
+        function startAutoRotate() {
+            autoRotateInterval = setInterval(() => {
+                nextSlide();
+            }, 5000);
+        }
+
+        function resetAutoRotate() {
+            if (autoRotateInterval) {
+                clearInterval(autoRotateInterval);
+            }
+            startAutoRotate();
+        }
+
+        function setCurrentYear() {
+            const currentYear = new Date().getFullYear();
+            const yearElement = document.getElementById('current-year');
+            if (yearElement) {
+                yearElement.textContent = currentYear;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            setCurrentYear();
+            createDots();
+            updateCarousel();
+            startAutoRotate();
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                // Don't prevent default for calendar links (but allow hero button to scroll)
+                if (this.id === 'nav-cta' || this.id === 'contact-cta') {
+                    return; // Let the calendar links work normally
+                }
+
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(15, 23, 42, 0.98)';
+            } else {
+                navbar.style.background = 'rgba(15, 23, 42, 0.95)';
+            }
+        });
+
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-menu').classList.remove('active');
+            });
+        });
+
+        let startX = 0;
+        let endX = 0;
+
+        const carousel = document.querySelector('.carousel');
+
+        if (carousel) {
+            carousel.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+            });
+
+            carousel.addEventListener('touchend', (e) => {
+                endX = e.changedTouches[0].clientX;
+                handleSwipe();
+            });
+
+            carousel.addEventListener('mouseenter', () => {
+                if (autoRotateInterval) {
+                    clearInterval(autoRotateInterval);
+                }
+            });
+
+            carousel.addEventListener('mouseleave', () => {
+                startAutoRotate();
+            });
+        }
+
+        function handleSwipe() {
+            const threshold = 50;
+            const diff = startX - endX;
+
+            if (Math.abs(diff) > threshold) {
+                if (diff > 0) {
+                    nextSlide();
+                } else {
+                    previousSlide();
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

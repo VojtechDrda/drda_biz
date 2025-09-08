@@ -781,10 +781,13 @@
             0% {
                 transform: translateX(0);
             }
+
             100% {
-                transform: translateX(calc(-10 * 100vw / 5));
+                transform: translateX(-50%);
+                /* Move halfway through duplicates */
             }
         }
+
         .services {
             background: #1e293b;
         }
@@ -1090,11 +1093,22 @@
             }
 
             .client-logo-slide {
-                flex: 0 0 33.333%;
+                flex: 0 0 auto !important;
+                /* Override desktop fixed width */
+                padding: 0 10px;
+                /* Tight spacing between logos */
             }
 
             .client-logo {
                 height: 40px;
+                width: auto;
+                max-width: 100px;
+            }
+
+            .clients-carousel-track {
+                width: max-content !important;
+                /* Override desktop calculation */
+                animation: logoScrollMobile 20s linear infinite;
             }
 
             .about {
@@ -1118,9 +1132,6 @@
                 height: 60px;
             }
 
-            .clients-carousel-track {
-                 animation: logoScrollMobile 15s linear infinite;
-            }
         }
     </style>
 </head>
@@ -1252,8 +1263,7 @@
                                 <img src="logos/diverzo.webp" alt="Diverzo" class="client-logo">
                             </div>
                             <div class="client-logo-slide">
-                                <img src="logos/azlegal.webp" alt="AZ Legal"
-                                    class="client-logo">
+                                <img src="logos/azlegal.webp" alt="AZ Legal" class="client-logo">
                             </div>
                             <div class="client-logo-slide">
                                 <img src="logos/chirs.png" alt="Chirs" class="client-logo">

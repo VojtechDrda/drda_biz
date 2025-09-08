@@ -5,6 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="page-title"></title>
+    <meta name="description"
+        content="Automation and AI integration expert helping businesses save time and costs. Specializing in workflow automation, API integrations, and AI solutions for Czech and international companies.">
+    <meta name="keywords"
+        content="automation expert, AI integration, workflow automation, Make, Power Automate, n8n, API integration, business process automation, Prague, Czech Republic">
+    <meta name="author" content="Vojtěch Drda">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://yourdomain.com">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com">
+    <meta property="og:title" content="Vojtěch Drda - Automation & AI Integration Expert">
+    <meta property="og:description"
+        content="Turn your biggest time-wasters into automated workflows. Expert in Make, Power Automate, n8n, and AI solutions.">
+    <meta property="og:image" content="https://yourdomain.com/vojtech_drda.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourdomain.com">
+    <meta property="twitter:title" content="Vojtěch Drda - Automation & AI Integration Expert">
+    <meta property="twitter:description" content="Turn your biggest time-wasters into automated workflows.">
+    <meta property="twitter:image" content="https://yourdomain.com/vojtech_drda.png">
 
     <script>
         // Translations object - single source of truth
@@ -231,6 +253,14 @@
 
             const pageTitle = document.getElementById('page-title');
             if (pageTitle) pageTitle.textContent = t.pageTitle;
+
+            // Update meta description based on language
+            const metaDescription = document.querySelector('meta[name="description"]');
+            if (metaDescription) {
+                metaDescription.content = currentLang === 'en'
+                    ? "Automation and AI integration expert helping businesses save time and costs. Specializing in workflow automation, API integrations, and AI solutions."
+                    : "Expert na automatizaci a AI integraci. Specializuji se na automatizaci procesů, API integrace a AI řešení pro firmy.";
+            }
 
             updateElement('nav-work', t.nav.work);
             updateElement('nav-services', t.nav.services);
@@ -1147,6 +1177,27 @@
 
         }
     </style>
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Vojtěch Drda",
+        "jobTitle": "Automation & AI Integration Expert",
+        "url": "https://drda.biz",
+        "email": "vojtech@drda.biz",
+        "telephone": "+420723653670",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Vokovická 679",
+            "addressLocality": "Praha 6",
+            "postalCode": "160 00",
+            "addressCountry": "CZ"
+        },
+        "sameAs": [
+            "https://linkedin.com/in/vojtechdrda"
+        ]
+        }
+</script>
 </head>
 
 <body>
